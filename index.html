@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f20b83">
+  <meta name="description" content="Um quiz educativo para refletir sobre a adultização infantil na era digital.">
+  <title>Infância Não Tem Filtro | Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Infância Não Tem Filtro - início">
+      <span class="brand-mark" aria-hidden="true">✿</span>
+      <span>Infância <strong>Não Tem Filtro</strong></span>
+    </a>
+    <span class="top-tag">QUIZ EDUCATIVO</span>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> TCF • EDUCAÇÃO DIGITAL</p>
+        <h1>Criança precisa de espaço para <span>ser criança.</span></h1>
+        <p class="hero-text">Na internet, nem tudo é só uma brincadeira ou uma tendência. Descubra o que você sabe sobre a adultização infantil e reflita sobre como proteger a infância no mundo digital.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" id="start-btn">Começar o quiz <span aria-hidden="true">→</span></button>
+          <span class="time-note">10 perguntas · cerca de 3 minutos</span>
+        </div>
+        <div class="hero-note"><span aria-hidden="true">💡</span> É para aprender, não para julgar. Vamos nessa?</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração decorativa de formas coloridas">
+        <div class="sun"></div><div class="shape shape-pink"></div><div class="shape shape-green"></div>
+        <div class="shape shape-blue"></div><div class="shape shape-yellow"></div>
+        <div class="art-card">
+          <span class="art-spark">✦</span>
+          <p>Infância é<br><strong>tempo de crescer</strong><br>com cuidado.</p>
+          <span class="art-smile">☺</span>
+        </div>
+        <span class="floating-star star-one">✦</span><span class="floating-star star-two">✳</span>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="quiz" aria-labelledby="quiz-title">
+      <div class="section-heading">
+        <p class="eyebrow">TESTE SEUS CONHECIMENTOS</p>
+        <h2 id="quiz-title">Você reconhece os sinais?</h2>
+        <p>Leia cada situação e escolha a alternativa que faz mais sentido.</p>
+      </div>
+
+      <div class="quiz-card" id="quiz-card">
+        <div class="quiz-meta">
+          <span class="question-counter" id="question-counter">Pergunta 1 de 10</span>
+          <span class="score-pill" id="score-pill">Acertos: 0</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Progresso do quiz" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <h3 id="question-text">Uma criança sente que precisa seguir padrões de beleza adultos para receber elogios nas redes sociais. O que isso pode indicar?</h3>
+        <div class="answers" id="answers">
+          <button class="answer" data-index="0"><span class="answer-letter">A</span><span>Que ela gosta de tecnologia, apenas.</span></button>
+          <button class="answer" data-index="1"><span class="answer-letter">B</span><span>Uma possível influência da adultização.</span></button>
+          <button class="answer" data-index="2"><span class="answer-letter">C</span><span>Que ela já tem responsabilidades de adulto.</span></button>
+          <button class="answer" data-index="3"><span class="answer-letter">D</span><span>Que isso acontece com todas as crianças.</span></button>
+        </div>
+        <div class="feedback" id="feedback" aria-live="polite" hidden>
+          <strong id="feedback-title"></strong>
+          <p id="feedback-text"></p>
+        </div>
+        <div class="quiz-footer">
+          <span class="gentle-reminder">Cada infância é única 💛</span>
+          <button class="button button-primary" id="next-btn" disabled>Próxima pergunta →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-card" id="results" hidden aria-live="polite">
+      <div class="result-confetti" aria-hidden="true">✦ ✿ ✦</div>
+      <p class="eyebrow">SEU RESULTADO</p>
+      <h2 id="result-heading">Você concluiu o quiz!</h2>
+      <div class="result-score"><span id="final-score">0</span><small>/ 10 acertos</small></div>
+      <p class="result-message" id="result-message"></p>
+      <p class="result-motto">Proteger a infância também é uma responsabilidade no mundo digital.</p>
+      <div class="result-actions">
+        <button class="button button-primary" id="restart-btn">Fazer novamente ↻</button>
+        <a class="button button-outline" href="#saiba-mais">Saiba mais ↓</a>
+      </div>
+    </section>
+
+    <section class="learn-section" id="saiba-mais">
+      <div class="learn-intro">
+        <p class="eyebrow">CONTINUE APRENDENDO</p>
+        <h2>Informação também é proteção.</h2>
+        <p>Para aprofundar o tema, consulte fontes oficiais e confiáveis. O quiz é educativo e não substitui a leitura das leis e pesquisas.</p>
+      </div>
+      <div class="source-grid">
+        <a class="source-card" href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon icon-pink">§</span><span class="source-label">LEGISLAÇÃO</span>
+          <strong>Estatuto da Criança e do Adolescente (ECA)</strong><span class="source-link">Consultar no Planalto ↗</span>
+        </a>
+        <a class="source-card" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon icon-green">✓</span><span class="source-label">AMBIENTE DIGITAL</span>
+          <strong>Lei nº 15.211/2025 — proteção de crianças e adolescentes em ambientes digitais</strong><span class="source-link">Consultar no Planalto ↗</span>
+        </a>
+        <a class="source-card" href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon icon-blue">◎</span><span class="source-label">PROTEÇÃO DE DADOS</span>
+          <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong><span class="source-link">Acessar site oficial ↗</span>
+        </a>
+        <a class="source-card" href="https://www.unicef.org/brazil/" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon icon-yellow">✦</span><span class="source-label">DIREITOS DA INFÂNCIA</span>
+          <strong>UNICEF Brasil</strong><span class="source-link">Acessar site oficial ↗</span>
+        </a>
+      </div>
+      <p class="source-disclaimer">Observação: situações e exemplos do quiz são ilustrativos. A análise de cada caso depende do contexto; nem toda publicação envolvendo uma criança constitui, por si só, um crime.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">✿</span><span>Infância <strong>Não Tem Filtro</strong></span></a>
+    <p>Um projeto educativo de conscientização sobre a adultização infantil na era digital.</p>
+    <span class="footer-dot">Feito para aprender, refletir e proteger.</span>
+  </footer>
+</body>
+</html>
